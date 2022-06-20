@@ -52,5 +52,9 @@ int main(void)
 	printf("%zu | %s\n", ft_strlcpy(tab, "bonheur", 1), tab);
 	printf("%zu | %s\n", strlcpy(tab, "bonheur", 1), tab);
 
+	char tab2[15] = {'b', 'o', 'n', 'j', 'o', 'u', 'r', '\0'};
+	printf("%zu | %s\n", ft_strlcat(tab, "bonheur", 7), tab2);
+	printf("%zu | %s\n", strlcat(tab, "bonheur", 7), tab2);
+
 	return (0);
 }
