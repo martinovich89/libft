@@ -35,7 +35,7 @@ CFLAGS			=	-Wall -Wextra -Werror -lbsd -fsanitize=address -g3
 
 RM				=	rm -rf
 
-all: $(NAME)
+all : $(NAME)
 
 $(NAME) : $(OBJS) Makefile
 	ar rc $@ $(OBJS)

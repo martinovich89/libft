@@ -53,8 +53,9 @@ int main(void)
 	printf("%zu | %s\n", strlcpy(tab, "bonheur", 1), tab);
 
 	char tab2[15] = {'b', 'o', 'n', 'j', 'o', 'u', 'r', '\0'};
-	printf("%zu | %s\n", ft_strlcat(tab, "bonheur", 7), tab2);
-	printf("%zu | %s\n", strlcat(tab, "bonheur", 7), tab2);
+	printf("%zu | %s\n", ft_strlcat(tab2, "bonheur", 20), tab2);
+	strcpy(tab2, "bonjour");
+	printf("%zu | %s\n", strlcat(tab2, "bonheur", 20), tab2);
 
 	return (0);
 }
