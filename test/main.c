@@ -1,5 +1,5 @@
 #include "../headers/libft.h"
-#include <string.h>
+#include <bsd/string.h>
 #include <strings.h>
 #include <ctype.h>
 
@@ -24,10 +24,33 @@ int main(void)
 
 	printf("%c\n", ft_tolower('C'));
 
-	char str[8] = {'b', 'o', 'n', 'j', 'o', 'u', 'r', '\0'};
+	char *str = "bonjour";
 	printf("%p | %p\n", ft_strchr(str, 'o'), ft_strchr(str, 'a'));
 
-	printf("%p | %p\n", ft_strrchr(str, 'b'), ft_strrchr(str, 'a'));
+	printf("%p | %p\n", ft_strrchr(str, 'o'), ft_strrchr(str, 'a'));
+
+	printf("%d | %d\n", ft_strncmp(str, "b", 2), strncmp(str, "b", 2));
+
+	char tab[8] = {'b', 'o', 'n', 'j', 'o', 'u', 'r', '\0'};
+	ft_memset(tab + 3, 'a', 4);
+	printf("%s\n", tab);
+	ft_bzero(tab + 4, 3);
+	printf("%s\n", tab);
+
+	ft_memcpy(tab, "bonjour", 7);
+	printf("%s\n", tab);
+
+	ft_memmove(tab, tab+3, 4);
+	printf("%s\n", tab);
+	ft_memcpy(tab, "bonjour", 7);
+	ft_memmove(tab+3, tab, 4);
+	printf("%s\n", tab);
+	ft_memcpy(tab, "bonjour", 7);
+	ft_memmove(tab, tab, 4);
+	printf("%s\n", tab);
+
+	printf("%zu | %s\n", ft_strlcpy(tab, "bonheur", 1), tab);
+	printf("%zu | %s\n", strlcpy(tab, "bonheur", 1), tab);
 
 	return (0);
 }

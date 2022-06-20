@@ -7,5 +7,5 @@ char *ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
-	return ((char *)((s[i] == c) * (ptrdiff_t)s[i]));
+	return ((char *)((s[i] == c) * (ptrdiff_t)(s + i)));
 }

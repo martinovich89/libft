@@ -13,7 +13,13 @@ SRCS			=	$(addprefix srcs/, \
 					ft_toupper.c \
 					ft_tolower.c \
 					ft_strchr.c \
-					ft_strrchr.c)
+					ft_strrchr.c \
+					ft_strncmp.c \
+					ft_memset.c \
+					ft_bzero.c \
+					ft_memcpy.c \
+					ft_memmove.c \
+					ft_strlcpy.c)
 
 TEST_SRCS		=	$(addprefix test/, \
 					main.c)
@@ -24,7 +30,7 @@ HEADERS			=	headers/libft.h
 
 CC				=	gcc
 
-CFLAGS			=	-Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS			=	-Wall -Wextra -Werror -lbsd -fsanitize=address -g3
 
 RM				=	rm -rf
 
