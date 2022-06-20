@@ -11,7 +11,9 @@ SRCS			=	$(addprefix srcs/, \
 					ft_isascii.c \
 					ft_isprint.c \
 					ft_toupper.c \
-					ft_tolower.c)
+					ft_tolower.c \
+					ft_strchr.c \
+					ft_strrchr.c)
 
 TEST_SRCS		=	$(addprefix test/, \
 					main.c)
@@ -22,7 +24,7 @@ HEADERS			=	headers/libft.h
 
 CC				=	gcc
 
-CFLAGS			=	-Wall -Wextra -Werror #-fsanitize=address -g3
+CFLAGS			=	-Wall -Wextra -Werror -fsanitize=address -g3
 
 RM				=	rm -rf
 
