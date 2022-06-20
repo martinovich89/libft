@@ -57,5 +57,14 @@ int main(void)
 	strcpy(tab2, "bonjour");
 	printf("%zu | %s\n", strlcat(tab2, "bonheur", 20), tab2);
 
+	printf("%p\n", (char *)ft_memchr(tab2, 'h', 11));
+	printf("%p\n", (char *)memchr(tab2, 'h', 11));
+
+	printf("%d\n", ft_memcmp(tab, tab2, 3));
+	printf("%d\n", memcmp(tab, tab2, 3));
+
+	printf("%p\n", ft_strnstr(tab2, "heur", 15));
+	printf("%p\n", strnstr(tab2, "heur", 15));
+
 	return (0);
 }

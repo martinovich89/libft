@@ -20,7 +20,10 @@ SRCS			=	$(addprefix srcs/, \
 					ft_memcpy.c \
 					ft_memmove.c \
 					ft_strlcpy.c \
-					ft_strlcat.c)
+					ft_strlcat.c \
+					ft_memchr.c \
+					ft_memcmp.c \
+					ft_strnstr.c)
 
 TEST_SRCS		=	$(addprefix test/, \
 					main.c)
