@@ -63,8 +63,8 @@ int main(void)
 	printf("%d\n", ft_memcmp(tab, tab2, 3));
 	printf("%d\n", memcmp(tab, tab2, 3));
 
-	printf("%p\n", ft_strnstr(tab2, "heur", 15));
-	printf("%p\n", strnstr(tab2, "heur", 15));
+	printf("%p\n", ft_strnstr(tab2, "heur", 200));
+	printf("%p\n", strnstr(tab2, "heur", 200));
 
 	return (0);
 }
