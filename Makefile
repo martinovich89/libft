@@ -30,7 +30,11 @@ SRCS			=	$(addprefix srcs/, \
 					ft_strdup.c \
 					ft_substr.c \
 					ft_strjoin.c \
-					ft_strtrim.c)
+					ft_strtrim.c \
+					ft_skipcharset.c \
+					ft_tabdel.c \
+					ft_memdel.c \
+					ft_split.c)
 
 TEST_SRCS		=	$(addprefix test/, \
 					main.c)

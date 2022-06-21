@@ -35,5 +35,9 @@ char		*ft_strdup(const char *s);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
+char		**ft_split(char const *s, char c);
+int			ft_skipcharset(char *str, char *set);
+void		ft_tabdel(void *tab);
+void		ft_memdel(void *ptr);
 
 #endif

@@ -13,8 +13,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		amount_trimmed++;
 	if (amount_trimmed >= ft_strlen(s1))
 		return (ft_strdup(""));
-	i = ft_strlen(s1) - 1;
-	while (i > 0 && ft_ischarset(s1[i--], (char *)set))
+	i = ft_strlen(s1);
+	while (--i > 0 && ft_ischarset(s1[i], (char *)set))
 		amount_trimmed++;
 	len = ft_strlen(s1) - amount_trimmed;
 	ptr = malloc(len + 1);

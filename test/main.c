@@ -91,9 +91,18 @@ int main(void)
 	printf("%zu\n", ft_strlen(ptr4));
 	free(ptr4);
 
-	char *ptr5 = ft_strtrim("asdfsabonjourasdfas", "asdf");
+	char *ptr5 = ft_strtrim("asasasbonjourdfdfdf", "asdf");
 	printf("|%s|\n", ptr5);
-	free(ptr5);
+	ft_memdel(&ptr5);
+
+	char **ptr6 = ft_split("bonjour tout le monde !", ' ');
+	i = 0;
+	while (i < 5)
+	{
+		printf("%s\n", ptr6[i]);
+		i++;
+	}
+	ft_tabdel(&ptr6);
 
 	return (0);
 }
