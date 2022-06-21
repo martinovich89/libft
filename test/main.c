@@ -49,8 +49,8 @@ int main(void)
 	ft_memmove(tab, tab, 4);
 	printf("%s\n", tab);
 
-	printf("%zu | %s\n", ft_strlcpy(tab, "bonheur", 1), tab);
-	printf("%zu | %s\n", strlcpy(tab, "bonheur", 1), tab);
+	printf("%zu | %s\n", ft_strlcpy(tab, "bonheur", 12), tab);
+	printf("%zu | %s\n", strlcpy(tab, "bonheur", 12), tab);
 
 	char tab2[15] = {'b', 'o', 'n', 'j', 'o', 'u', 'r', '\0'};
 	printf("%zu | %s\n", ft_strlcat(tab2, "bonheur", 20), tab2);
@@ -68,6 +68,32 @@ int main(void)
 
 	printf("%d\n", ft_atoi(" 0"));
 	printf("%d\n", atoi(" 0"));
+
+	int *ptr = ft_calloc(12, 1);
+	int i = 0;
+	while (i < 3)
+	{
+		printf("%d\n", ptr[i]);
+		i++;
+	}
+	free(ptr);
+
+	char *ptr2 = ft_strdup("tab2");
+	printf("%s\n", ptr2);
+	free(ptr2);
+
+	char *ptr3 = ft_substr(tab2, 3, 4);
+	printf("%s\n", ptr3);
+	free(ptr3);
+
+	char *ptr4 = ft_strjoin(tab, tab2);
+	printf("%s | %s | %s\n", tab, tab2, ptr4);
+	printf("%zu\n", ft_strlen(ptr4));
+	free(ptr4);
+
+	char *ptr5 = ft_strtrim("asdfsabonjourasdfas", "asdf");
+	printf("|%s|\n", ptr5);
+	free(ptr5);
 
 	return (0);
 }

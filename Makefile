@@ -25,7 +25,12 @@ SRCS			=	$(addprefix srcs/, \
 					ft_memcmp.c \
 					ft_strnstr.c \
 					ft_atoi.c \
-					ft_ischarset.c)
+					ft_ischarset.c \
+					ft_calloc.c \
+					ft_strdup.c \
+					ft_substr.c \
+					ft_strjoin.c \
+					ft_strtrim.c)
 
 TEST_SRCS		=	$(addprefix test/, \
 					main.c)
