@@ -66,5 +66,8 @@ int main(void)
 	printf("%p\n", ft_strnstr(tab2, "heur", 200));
 	printf("%p\n", strnstr(tab2, "heur", 200));
 
+	printf("%d\n", ft_atoi(" 0"));
+	printf("%d\n", atoi(" 0"));
+
 	return (0);
 }
