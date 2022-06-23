@@ -2,7 +2,9 @@ NAME			=	libft.a
 
 TEST			=	libft_test
 
-SRCS			=	$(addprefix srcs/, \
+PATH_SRC		= ./
+
+SRCS			=	$(addprefix $(PATH_SRC), \
 					ft_strlen.c \
 					ft_strcmp.c \
 					ft_isalpha.c \
@@ -31,10 +33,19 @@ SRCS			=	$(addprefix srcs/, \
 					ft_substr.c \
 					ft_strjoin.c \
 					ft_strtrim.c \
+					ft_chartostr.c \
 					ft_skipcharset.c \
+					ft_skipnoncharset.c \
 					ft_tabdel.c \
 					ft_memdel.c \
-					ft_split.c)
+					ft_split.c \
+					ft_itoa.c \
+					ft_strmapi.c \
+					ft_striteri.c \
+					ft_putchar_fd.c \
+					ft_putstr_fd.c \
+					ft_putendl_fd.c \
+					ft_putnbr_fd.c)
 
 TEST_SRCS		=	$(addprefix test/, \
 					main.c)
@@ -43,9 +54,13 @@ OBJS			=	$(SRCS:.c=.o)
 
 HEADERS			=	headers/libft.h
 
-CC				=	gcc
+CC				=	clang
 
-CFLAGS			=	-Wall -Wextra -Werror -lbsd -fsanitize=address -g3
+CFLAGS			=	-Wall -Wextra -Werror # -fsanitize=address -g3
+
+LDFLAGS			= 	-L.
+
+LDLIBS 			= 	#-lbsd
 
 RM				=	rm -rf
 

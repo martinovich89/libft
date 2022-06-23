@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_skipnoncharset.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhenry <mhenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/23 16:23:28 by mhenry            #+#    #+#             */
-/*   Updated: 2022/06/23 16:26:09 by mhenry           ###   ########.fr       */
+/*   Created: 2022/06/23 16:22:22 by mhenry            #+#    #+#             */
+/*   Updated: 2022/06/23 17:56:30 by mhenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_skipnoncharset(const char *str, const char *set)
 {
-	char	*ptr;
+	size_t	i;
 
-	ptr = malloc(len + 1);
-	if (!ptr)
-		return (NULL);
-	ft_strlcpy(ptr, s + start, len + 1);
-	return (ptr);
+	i = 0;
+	while (str[i] && !ft_ischarset(str[i], set))
+		i++;
+	return (i);
 }
