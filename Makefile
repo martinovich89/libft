@@ -2,7 +2,7 @@ NAME			=	libft.a
 
 TEST			=	libft_test
 
-PATH_SRC		= ./
+PATH_SRC		= ./srcs/
 
 SRCS			=	$(addprefix $(PATH_SRC), \
 					ft_strlen.c \
@@ -60,7 +60,7 @@ CFLAGS			=	-Wall -Wextra -Werror # -fsanitize=address -g3
 
 LDFLAGS			= 	-L.
 
-LDLIBS 			= 	#-lbsd
+LDLIBS 			= 	-lbsd
 
 RM				=	rm -rf
 
@@ -76,7 +76,7 @@ $(NAME) : $(OBJS) Makefile
 test : $(TEST)
 
 $(TEST) : $(NAME) $(OBJS) $(TEST_SRCS) $(HEADERS)
-	$(CC) $(CFLAGS) $(TEST_SRCS) -o $(TEST) libft.a
+	$(CC) $(CFLAGS) $(TEST_SRCS) $(LDLIBS) -o $(TEST) libft.a
 
 clean :
 	$(RM) $(OBJS)
